@@ -1,58 +1,83 @@
 <?php
-//include "includes/header.php";
-$animalid = $_GET["animal"];
+//includes "includes/header.php";
+$animalid = $_GET["animal_id"];
 ?>
 
-<BR><BR><BR>
 
-<?php 
-//echo $regionid; 
-//get the region name
-$sql = "SELECT animal_name FROM animals
+
+Winston
+<?php
+$sql = "SELECT * FROM animal
 where animal_id={$animalid} ;";
-$mysqli = new mysqli("195.35.59.14","u121755072_petsrfriends","#v4ZxLBaL2","u121755072_petsrfriends");
-if ($mysqli->connect_errno) {
+//$mysqli = new mysqli("127.0.0.1","root","","mca");
+$mysqli = new mysqli("195.35.59.14", "u121755072_petsrfriends","#v4ZxLBaL2","u121755072_petsrfriends");
+
+if ($mysqli->connect_errno){
     echo "Failed to connect to MySQL: " . $mysqli->connect_error;
 }
+
+
 $result = $mysqli -> query($sql);
 $rows = $result -> fetch_all(MYSQLI_ASSOC);
 echo "<H1>";
-echo $rows[0]["animal_name"];
+echo $rows[0]["Animal_Name"];
 echo "</H1>";
-//send region to database and get countries
-$sql = "SELECT * FROM animals
-where region_id={$regionid} ;";
+
+echo "<b>Gender</b>: ";
+echo $rows[0]["Animal_Gender"];
+echo "<BR><BR>";
+
+echo "<b>Date of Birth</b>: ";
+echo number_format($rows[0]["Est_Birth_Date"]);
+echo "<BR><BR>";
+
+echo "<b>Animal_Type</b>: ";
+//echo $rows[0]["CLIMATE"];
+echo htmlentities($rows[0]["Animal_Type"]);
+echo htmlentities($rows[0]["Animal_Type"]);
+echo "<BR><BR>";
+
+echo"<b>Color</b>: ";
+echo $rows[0]["color"];
+$currencyid = $rows[0]["coat_length"];
+
+$sql = "SELECT * FROM animal where
+animal_id in (
+SELECT animal_id FROM animal
+where animal_id={$animal_id} );";
 $result = $mysqli -> query($sql);
 $rows = $result -> fetch_all(MYSQLI_ASSOC);
-//print_r($rows);
-?>
- <table class="w3-table-all w3-hoverable" >
-    <thead>
-    <tr style="background-color: skyblue;">
-        <th>Country Name</th>
-        <th>Location</th>
-        <th>Capitol</th>
-    </tr>
-    </thead>
-    <tbody>
-<?PHP
-foreach($rows as $row){
-    echo "<tr><td>";
-    $c=$row["COUNTRY_ID"];
-    echo "<a href='country.php?countryid={$c}'>";
-    echo $row["COUNTRY_NAME"];
-    echo "</a>";
-    echo "</td><td>";
-    echo $row["LOCATION"];
-    echo "</td><td> ";
-    echo $row["CAPITOL"];
-    echo "</td></tr>";
-}
-    ?>
-    </tbody>
-</table>
+echo "<BR>";
+echo "<b>Languages</b>:<BR>";
 
+foreach($rows as $row){
+    echo $row["Animal_Name"];
+    echo "<BR>";
+}
+
+//print_r($rows);
+
+//currencies
+
+$sql = "SELECT * FROM animal
+where Animal_Name='{$Animal_Name}' ;";
+
+$result = $mysqli -> query($sql);
+$rows = $result -> fetch_all(MYSQLI_ASSOC);
+
+echo "<BR>";
+echo "<b>Currency</b>:<BR>";
+
+echo $rows[0]["Est_Birth_Date"];
+
+//print_r($rows);
+//currency sql
+//print_r($rows[0]);
+
+
+//<BR> <BR>
+?>
 
 <?php
-include "includes/footer.php";
+//include "includes/footer.php";
 ?>
