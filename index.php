@@ -92,7 +92,7 @@ $rows = $result -> fetch_all(MYSQLI_ASSOC);
     <?php
     foreach($rows as $animal){
       
-
+ 
     ?>
         <a href="profilepage.php?animal_id=<?php echo $animal["animal_id"]; ?>"><div class="product">
 <?php

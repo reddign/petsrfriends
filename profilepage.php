@@ -5,7 +5,7 @@ $animalid = $_GET["animal_id"];
 
 
 
-Winston
+
 <?php
 $sql = "SELECT * FROM animal
 where animal_id={$animalid} ;";
@@ -43,10 +43,9 @@ echo"<b>Coat Length</b>: ";
 echo $rows[0]["coat_length"];
 
 echo "<BR>";
-echo "<b>Birthday</b>:<BR>";
-
+echo "<b>Birthday</b>:";
 echo $rows[0]["Est_Birth_Date"];
-
+echo "<BR>";
 
 if(is_file("imageFolder/{$animalid}.jpg")){
 
