@@ -5,7 +5,13 @@
     <title>Pets R Friends</title>
 
     <style>
+      
 
+        .name {
+            font-size: 25px;
+            margin: 20px;
+            text-align: center;
+        }
         header {
             text-align: center;
             text-decoration: none;
@@ -111,8 +117,8 @@ $rows = $result -> fetch_all(MYSQLI_ASSOC);
             }
 ?>
             
-            <p><b><?php echo $animal["Animal_Name"]; ?></b></p>
-            <p>$400</p>
+            <p class="name"><b><?php echo $animal["Animal_Name"]; ?></b></p>
+            <p><?php echo $animal["Animal_Gender"]; echo " "; echo $animal["Size"]; ?></p>
         </div></a>
     <?php
         }
