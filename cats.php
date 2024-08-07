@@ -36,20 +36,23 @@
         
 
 
+
         img {
-            margin-top: 20px;
-            height: 100px;
-            width: 100px;
+            margin-top: 5px;
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
         }
+        
 
         .flex-container  > a > div:hover {
                 background: #fff;
-                border: 3px solid #c3e6ff;
+                border: 3px solid #808000;
                 text-decoration: none;
         }
 
         .flex-container > a > div {
-          background-color: #f1f1f1;
+          background-color: #fff;
           width: 200px;
           margin: 10px;
           padding: 20px;
@@ -66,7 +69,7 @@
 </header>
 <br>
 <body>
-    <h1>Our cats</h1>
+    <h1>Our Cats</h1>
     <?php
 
         //copy region.php code to get countries but switch to animals
@@ -92,24 +95,24 @@ $rows = $result -> fetch_all(MYSQLI_ASSOC);
     <?php
     foreach($rows as $animal){
       
-
+ 
     ?>
         <a href="catprofile.php?animal_id=<?php echo $animal["animal_id"]; ?>"><div class="product">
 <?php
 
             $animalid = $animal["animal_id"];
-            if(is_file("imageFolder/{$animalid}.png")){
+            if(is_file("cats/{$animalid}.png")){
 
-            echo "<img src='imageFolder/{$animalid}.png' width='200px'>";
+            echo "<img src='cats/{$animalid}.png' width='200px'>";
 
             }else{
-            echo "<img src='imageFolder/comingsoon.jpg' width='200px'>";
+            echo "<img src='cats/comingsoon.jpg' width='200px'>";
 
             }
 ?>
             
-            <h5><?php echo $animal["Animal_Name"]; ?></h5>
-            <h6>$400</h6>
+            <p><b><?php echo $animal["Animal_Name"]; ?></b></p>
+            <p>$400</p>
         </div></a>
     <?php
         }
@@ -125,4 +128,4 @@ $rows = $result -> fetch_all(MYSQLI_ASSOC);
     <p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p>
     
     </body>
-</html>                         
+</html>

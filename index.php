@@ -108,8 +108,8 @@ $rows = $result -> fetch_all(MYSQLI_ASSOC);
             }
 ?>
             
-            <h5><?php echo $animal["Animal_Name"]; ?></h5>
-            <h6>$400</h6>
+            <p><?php echo $animal["Animal_Name"]; ?></p>
+            <p>$400</p>
         </div></a>
     <?php
         }

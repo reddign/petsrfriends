@@ -33,42 +33,29 @@ echo "<BR><BR>";
 
 echo "<b>Animal Type</b>: ";
 //echo $rows[0]["CLIMATE"];
-// echo htmlentities($rows[0]["Animal_Type"]);
 echo htmlentities($rows[0]["Animal_Type"]);
 echo "<BR><BR>";
 
 echo"<b>Color</b>: ";
 echo $rows[0]["color"];
-$currencyid = $rows[0]["coat_length"];
+echo "<BR><BR>";
 
-$sql = "SELECT * FROM animal where
-animal_id in (
-SELECT animal_id FROM animal
-where animal_id={$animal_id} );";
-$result = $mysqli -> query($sql);
-$rows = $result -> fetch_all(MYSQLI_ASSOC);
-// echo "<BR>";
-// echo "<b>Languages</b>:<BR>";
+echo"<b>Coat Length</b>: ";
+echo $rows[0]["coat_length"];
 
-foreach($rows as $row){
-    echo $row["Animal_Name"];
-    echo "<BR>";
+echo "<BR>";
+
+echo "<BR>";
+
+
+if(is_file("cats/{$animalid}.png")){
+
+    echo "<img src='cats/{$animalid}.png' width='200px' height='200px' >";
+
+}else{
+    echo "<img src='cats/comingsoon.jpg' width='200px'>";
+
 }
-
-//print_r($rows);
-
-//currencies
-
-$sql = "SELECT * FROM animal
-where Animal_Name='{$Animal_Name}' ;";
-
-$result = $mysqli -> query($sql);
-$rows = $result -> fetch_all(MYSQLI_ASSOC);
-
-// echo "<BR>";
-// echo "<b>Currency</b>:<BR>";
-
-echo $rows[0]["Est_Birth_Date"];
 
 //print_r($rows);
 //currency sql
