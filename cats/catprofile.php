@@ -5,7 +5,7 @@ $animalid = $_GET["animal_id"];
 
 
 
-Winston
+
 <?php
 $sql = "SELECT * FROM animal
 where animal_id={$animalid} ;";
@@ -28,12 +28,12 @@ echo $rows[0]["Animal_Gender"];
 echo "<BR><BR>";
 
 echo "<b>Date of Birth</b>: ";
-echo number_format($rows[0]["Est_Birth_Date"]);
+echo $rows[0]["Est_Birth_Date"];
 echo "<BR><BR>";
 
-echo "<b>Animal_Type</b>: ";
+echo "<b>Animal Type</b>: ";
 //echo $rows[0]["CLIMATE"];
-echo htmlentities($rows[0]["Animal_Type"]);
+// echo htmlentities($rows[0]["Animal_Type"]);
 echo htmlentities($rows[0]["Animal_Type"]);
 echo "<BR><BR>";
 
@@ -47,8 +47,8 @@ SELECT animal_id FROM animal
 where animal_id={$animal_id} );";
 $result = $mysqli -> query($sql);
 $rows = $result -> fetch_all(MYSQLI_ASSOC);
-echo "<BR>";
-echo "<b>Languages</b>:<BR>";
+// echo "<BR>";
+// echo "<b>Languages</b>:<BR>";
 
 foreach($rows as $row){
     echo $row["Animal_Name"];
@@ -65,8 +65,8 @@ where Animal_Name='{$Animal_Name}' ;";
 $result = $mysqli -> query($sql);
 $rows = $result -> fetch_all(MYSQLI_ASSOC);
 
-echo "<BR>";
-echo "<b>Currency</b>:<BR>";
+// echo "<BR>";
+// echo "<b>Currency</b>:<BR>";
 
 echo $rows[0]["Est_Birth_Date"];
 
