@@ -53,8 +53,9 @@
 
         .flex-container  > a > div:hover {
                 background: #fff;
-                border: 3px solid #808000;
+                /* border: 3px solid #808000; */
                 text-decoration: none;
+                box-shadow: 0 0 20px olive;
         }
 
         .flex-container > a > div {
