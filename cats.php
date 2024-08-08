@@ -20,6 +20,7 @@
             font-size: 25px;
             margin: 20px;
             text-align: center;
+            font-family: "system-ui";
         }
         header {
             text-align: center;
@@ -65,8 +66,12 @@
         .flex-container  > a > div:hover {
                 /* border: 3px solid #808000; */
                 text-decoration: none;
-                box-shadow: 0 0 30px #B9C8BC;
-        }
+                box-shadow: 0 0 30px #3A6A59;
+                -ms-transform: scale(1); /* IE 9 */
+                -webkit-transform: scale(1); /* Safari 3-8 */
+                transform: scale(1.1); 
+`          }
+        
 
 
         .flex-container > a > div {
@@ -79,6 +84,7 @@
           font-size: 20px;
           box-shadow: 0 0 10px rgba(0,0,0,0.1);
           border-radius: 20px;
+          transition: transform .5s;
         }
     </style>
 
