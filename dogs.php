@@ -203,8 +203,8 @@ $rows = $result -> fetch_all(MYSQLI_ASSOC);
     </div>
 
     <p>Select a friend to adopt and choose an adoption date!</p>
-    <p>A container with "flex-wrap: nowrap;" will never wrap its items.</p>
-    <p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p>
+    <!-- <p>A container with "flex-wrap: nowrap;" will never wrap its items.</p>
+    <p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p> -->
     
     </body>
 </html>
