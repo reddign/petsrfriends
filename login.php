@@ -23,7 +23,7 @@ if (count($rows)>0){
     //don't log them in
     $_SESSION["LoggedIn"]="NO";
     $_SESSION["UserID"]="";
-    header("location:index.htm");
+    header("location:register.htm");
 }
 
 

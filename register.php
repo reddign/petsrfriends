@@ -27,6 +27,6 @@ $stmt->execute();
 // $to = $email;
 // require("email.php");
 
-header("location:index.htm");
+header("location:index.html");
 
 ?>
