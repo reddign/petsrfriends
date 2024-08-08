@@ -1,3 +1,6 @@
+<?php
+require "includes/header.php";
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -141,7 +144,7 @@
 
 </head>
 <header>
-    <h1><a href="google.com">Pets R Friends</a></h1>
+    <!-- <h1><a href="google.com">Pets R Friends</a></h1> -->
 </header>
 <br>
 <body>
