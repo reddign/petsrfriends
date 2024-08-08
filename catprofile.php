@@ -19,7 +19,8 @@ $animalid = $_GET["animal_id"];
         font-size: 25px;
         margin: 20px;
         text-align: center;
-        font-family: "system-ui";
+        font-family: "segou-ui", sans-serif;
+        weight: bold;
     }
     header {
         text-align: center;

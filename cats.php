@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,8 +7,11 @@
 
     <style>
     
-        p {
-            color: #686A4E;
+        .desc {
+            color: #B9C8BC;
+            font-family: Arial, Helvetica, sans-serif;
+
+
         }
         H1 { 
             font-weight: "bold";
@@ -20,7 +24,10 @@
             font-size: 25px;
             margin: 20px;
             text-align: center;
-            font-family: "Georgia", serif;
+            letter-spacing: .1rem;
+            font-family: "segou-ui", sans-serif;
+            font-weight: 600;
+            color: #3A6A59;
         }
         header {
             text-align: center;
@@ -34,13 +41,13 @@
 
         a {
             text-decoration: none;
-            text-decoration-color: brown;
+            
         }
 
-        .product {
+        /* .product {
             color: brown;
             text-decoration-color: brown;    
-        }
+        } */
 
         .flex-container {
           display: flex;
@@ -85,6 +92,7 @@
           box-shadow: 0 0 10px rgba(0,0,0,0.1);
           border-radius: 20px;
           transition: transform .5s;
+         
         }
     </style>
 
@@ -133,8 +141,8 @@ $rows = $result -> fetch_all(MYSQLI_ASSOC);
             }
 ?>
             
-            <p class="name"><b><?php echo $animal["Animal_Name"]; ?></b></p>
-            <p><?php echo $animal["Animal_Gender"]; echo " "; echo $animal["Size"]; ?></p>
+            <p class="name"><?php echo $animal["Animal_Name"]; ?></p>
+            <p class="desc"><?php echo $animal["Animal_Gender"]; echo " "; echo $animal["Size"]; ?></p>
         </div></a>
     <?php
         }
