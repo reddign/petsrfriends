@@ -5,8 +5,17 @@
     <title>Pets R Friends</title>
 
     <style>
-      
-
+    
+        p {
+            color: #686A4E;
+        }
+        H1 { 
+            font-weight: "bold";
+            font-size: 5em;
+            font-family: "Segoe Script";
+            margin-bottom: 10px;
+            color: #B2AC88;
+        }
         .name {
             font-size: 25px;
             margin: 20px;
@@ -36,7 +45,7 @@
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
-
+          border-radius: 10px;
           /* background-color: DodgerBlue; */
         }
         
@@ -48,18 +57,20 @@
             height: 200px;
             width: 200px;
             object-fit: cover;
+            border: 2px black;
+            border-radius:5px;
         }
         
 
         .flex-container  > a > div:hover {
-                background: #fff;
                 /* border: 3px solid #808000; */
                 text-decoration: none;
-                box-shadow: 0 0 20px olive;
+                box-shadow: 0 0 30px #B9C8BC;
         }
 
+
         .flex-container > a > div {
-          background-color: #fff;
+          background-color: #fbf7f5;
           width: 200px;
           margin: 10px;
           padding: 20px;
@@ -67,13 +78,11 @@
           line-height: 15px;
           font-size: 20px;
           box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          border-radius: 20px;
         }
     </style>
 
 </head>
-<header>
-    <h1><a href="google.com">Pets R Friends</a></h1>
-</header>
 <br>
 <body>
     <h1>Our Cats</h1>
@@ -113,7 +122,7 @@ $rows = $result -> fetch_all(MYSQLI_ASSOC);
             echo "<img src='cats/{$animalid}.png' width='200px'>";
 
             }else{
-            echo "<img src='cats/comingsoon.jpg' width='200px'>";
+            echo "<img src='cats/comingsoon.png' width='200px'>";
 
             }
 ?>
@@ -131,8 +140,6 @@ $rows = $result -> fetch_all(MYSQLI_ASSOC);
     </div>
 
     <p>Select a friend to adopt and choose an adoption date!</p>
-    <p>A container with "flex-wrap: nowrap;" will never wrap its items.</p>
-    <p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p>
     
     </body>
 </html>

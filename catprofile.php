@@ -53,7 +53,7 @@ if(is_file("cats/{$animalid}.png")){
     echo "<img src='cats/{$animalid}.png' width='200px' height='200px' >";
 
 }else{
-    echo "<img src='cats/comingsoon.jpg' width='200px'>";
+    echo "<img src='cats/comingsoon.png' width='200px'>";
 
 }
 
