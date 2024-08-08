@@ -66,7 +66,7 @@
         .flex-container  > a > div:hover {
                 /* border: 3px solid #808000; */
                 text-decoration: none;
-                box-shadow: 0 0 30px #3A6A59;
+                box-shadow: 0 0 30px #DD9927;
                 -ms-transform: scale(1); /* IE 9 */
                 -webkit-transform: scale(1); /* Safari 3-8 */
                 transform: scale(1.1); 
