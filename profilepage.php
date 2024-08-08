@@ -3,7 +3,86 @@
 $animalid = $_GET["animal_id"];
 ?>
 
+<style>
+    
+        p {
+            color: #686A4E;
+        }
+        H1 { 
+            font-weight: "bold";
+            font-size: 5em;
+            font-family: "Segoe Script";
+            margin-bottom: 10px;
+            color: #B2AC88;
+        }
+        .name {
+            font-size: 25px;
+            margin: 20px;
+            text-align: center;
+        }
+        header {
+            text-align: center;
+            text-decoration: none;
+        }
+        body {
+            background-color:beige;
+            text-align: center;
+            text-decoration: none;
+        }
 
+        a {
+            text-decoration: none;
+            text-decoration-color: brown;
+        }
+
+        .product {
+            color: brown;
+            text-decoration-color: brown;    
+        }
+
+        .flex-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          border-radius: 10px;
+          /* background-color: DodgerBlue; */
+        }
+        
+
+
+
+        img {
+            margin-top: 5px;
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+            border: 2px black;
+            border-radius:5px;
+        }
+        
+
+        .flex-container  > a > div:hover {
+                /* border: 3px solid #808000; */
+                text-decoration: none;
+                box-shadow: 0 0 30px #B9C8BC;
+        }
+
+
+        .flex-container > a > div {
+          background-color: #fbf7f5;
+          width: 200px;
+          margin: 10px;
+          padding: 20px;
+          text-align: center;
+          line-height: 15px;
+          font-size: 20px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          border-radius: 20px;
+        }
+    </style>
+
+</head>
+<br>
 
 
 <?php
@@ -38,6 +117,7 @@ echo "<BR><BR>";
 
 echo"<b>Color</b>: ";
 echo $rows[0]["color"];
+echo "<br><br>";
 
 echo"<b>Coat Length</b>: ";
 echo $rows[0]["coat_length"];
