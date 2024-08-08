@@ -64,7 +64,7 @@ require "includes/header.php";
     </style> -->
 
 
-    <style>
+    <!-- <style>
     
         p {
             color: #686A4E;
@@ -140,7 +140,98 @@ require "includes/header.php";
           box-shadow: 0 0 10px rgba(0,0,0,0.1);
           border-radius: 20px;
         }
-    </style>
+    </style> -->
+    <style>
+    
+    .desc {
+        color: #B9C8BC;
+        font-family: Arial, Helvetica, sans-serif;
+
+
+    }
+    H1 { 
+        font-weight: "bold";
+        font-size: 5em;
+        font-family: "Segoe Script";
+        margin-bottom: 10px;
+        color: #B2AC88;
+        margin-top: -20px;
+    }
+    .name {
+        font-size: 25px;
+        margin: 20px;
+        text-align: center;
+        letter-spacing: .1rem;
+        font-family: "segou-ui", sans-serif;
+        font-weight: 600;
+        color: #3A6A59;
+    }
+    header {
+        text-align: center;
+        text-decoration: none;
+    }
+    body {
+        background-color:beige;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    a {
+        text-decoration: none;
+        
+    }
+
+    /* .product {
+        color: brown;
+        text-decoration-color: brown;    
+    } */
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      border-radius: 10px;
+      /* background-color: DodgerBlue; */
+    }
+    
+
+
+
+    img {
+        margin-top: 5px;
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+        border: 2px black;
+        border-radius:5px;
+    }
+    
+
+    .flex-container  > a > div:hover {
+            /* border: 3px solid #808000; */
+            text-decoration: none;
+            box-shadow: 0 0 30px #DD9927;
+            -ms-transform: scale(1); /* IE 9 */
+            -webkit-transform: scale(1); /* Safari 3-8 */
+            transform: scale(1.1); 
+`          }
+    
+
+
+    .flex-container > a > div {
+      background-color: #fbf7f5;
+      width: 200px;
+      margin: 10px;
+      padding: 20px;
+      text-align: center;
+      line-height: 15px;
+      font-size: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 20px;
+      transition: transform .5s;
+     
+    }
+</style>
 
 </head>
 <header>
@@ -190,8 +281,8 @@ $rows = $result -> fetch_all(MYSQLI_ASSOC);
             }
 ?>
             
-            <p><?php echo $animal["Animal_Name"]; ?></p>
-            <p>$400</p>
+            <p class="name"><?php echo $animal["Animal_Name"]; ?></p>
+            <p class="desc"><?php echo $animal["Animal_Gender"]; echo " "; echo $animal["Size"]; ?></p>
         </div></a>
     <?php
         }
@@ -202,9 +293,12 @@ $rows = $result -> fetch_all(MYSQLI_ASSOC);
        
     </div>
 
-    <p>Select a friend to adopt and choose an adoption date!</p>
+    <!-- <p>Select a friend to adopt and choose an adoption date!</p> -->
     <!-- <p>A container with "flex-wrap: nowrap;" will never wrap its items.</p>
     <p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p> -->
     
     </body>
+    <?php
+require "includes/footer.php";
+?>
 </html>

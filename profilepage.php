@@ -145,5 +145,5 @@ if(is_file("imageFolder/{$animalid}.jpg")){
 ?>
 
 <?php
-//include "includes/footer.php";
+require "includes/footer.php";
 ?>
