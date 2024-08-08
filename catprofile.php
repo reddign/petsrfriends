@@ -1,6 +1,7 @@
 <?php
-//includes "includes/header.php";
+
 $animalid = $_GET["animal_id"];
+require "includes/header.php";
 ?>
 
 <style>
@@ -154,5 +155,5 @@ if(is_file("cats/{$animalid}.png")){
 ?>
 
 <?php
-//include "includes/footer.php";
+require "includes/footer.php";
 ?>

@@ -1,4 +1,6 @@
-
+<?php
+require "includes/header.php";
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,6 +21,7 @@
             font-family: "Segoe Script";
             margin-bottom: 10px;
             color: #B2AC88;
+            margin-top: -20px;
         }
         .name {
             font-size: 25px;
@@ -156,4 +159,7 @@ $rows = $result -> fetch_all(MYSQLI_ASSOC);
     <p>Select a friend to adopt and choose an adoption date!</p>
     
     </body>
+    <?php
+require "includes/footer.php";
+?>
 </html>
