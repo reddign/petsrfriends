@@ -123,8 +123,8 @@ echo"<b>Coat Length</b>: ";
 echo $rows[0]["coat_length"];
 
 echo "<BR>";
-echo "<b>Birthday</b>:";
-echo $rows[0]["Est_Birth_Date"];
+echo "<b>Date of Rescue</b>:";
+echo $rows[0]["date_of_rescue"];
 echo "<BR>";
 
 if(is_file("imageFolder/{$animalid}.jpg")){

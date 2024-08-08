@@ -42,6 +42,11 @@ echo "<BR><BR>";
 
 echo"<b>Coat Length</b>: ";
 echo $rows[0]["coat_length"];
+echo "<br><br>";
+
+echo "<b>Date of Rescue</b>: ";
+echo $rows[0]["date_of_rescue"];
+echo "<BR><BR>";
 
 echo "<BR>";
 
