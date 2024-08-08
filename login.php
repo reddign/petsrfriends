@@ -18,7 +18,7 @@ $rows = $result -> fetch_all(MYSQLI_ASSOC);
 if (count($rows)>0){
     $_SESSION["LoggedIn"]="YES";
     $_SESSION["email"]=$_POST["email"];
-    header("location:chooseDog.htm");  //may the landing page will be different??
+    header("location:index.html");  //may the landing page will be different??
 }else{
     //don't log them in
     $_SESSION["LoggedIn"]="NO";
