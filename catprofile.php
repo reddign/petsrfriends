@@ -29,9 +29,15 @@ require "includes/header.php";
         font-size: 20px;
         
     }
-    /* p {
+    p {
         color: #686A4E;
-    } */
+        text-align: center;
+        margin-left: -50px;
+        margin-top: 210px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+    }
     H1 { 
         font-weight: "bold";
         font-size: 5em;
@@ -161,12 +167,12 @@ echo "<br><br>";
 
 echo "<b>Date of Rescue</b>: ";
 echo $rows[0]["date_of_rescue"];
-echo "<BR><BR>";
+echo "<BR><BR><br>";
+// echo "<BR>";
 
-echo "<BR>";
-
-echo "<BR>";
+// echo "<BR>";
 ?>
+
 
 
 
@@ -174,21 +180,21 @@ echo "<BR>";
 
 <?php echo "<img src='cats/{$animalid}.png' width='200px' height='200px' >";?> 
 </div>
+ 
+<!-- 
+}else{
+/   echo "<img src='cats/comingsoon.png' width='200px'>";
 
+ }  -->
 
-<!-- // }else{
-//     echo "<img src='cats/comingsoon.png' width='200px'>";
-
-// }
-
-//print_r($rows);
+<!-- //print_r($rows);
 //currency sql
 //print_r($rows[0]);
 
 
 //<BR> <BR>
-?> -->
-
+?> --> 
+<?php echo "<p class=email><br> Reach out to petsrfriends@gmail.com if you are interested in adoption or have any further questions!";?>
 <?php
 require "includes/footer.php";
 ?>
