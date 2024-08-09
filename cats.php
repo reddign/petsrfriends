@@ -155,9 +155,6 @@ $rows = $result -> fetch_all(MYSQLI_ASSOC);
 
        
     </div>
-
-    <p>Select a friend to adopt and choose an adoption date!</p>
-    
     </body>
     <?php
 require "includes/footer.php";
