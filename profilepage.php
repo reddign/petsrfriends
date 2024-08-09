@@ -122,10 +122,10 @@ echo "<br><br>";
 echo"<b>Coat Length</b>: ";
 echo $rows[0]["coat_length"];
 
-echo "<BR>";
+echo "<BR><BR>";
 echo "<b>Date of Rescue</b>:";
 echo $rows[0]["date_of_rescue"];
-echo "<BR>";
+echo "<br>";
 
 if(is_file("imageFolder/{$animalid}.jpg")){
 
@@ -135,6 +135,9 @@ if(is_file("imageFolder/{$animalid}.jpg")){
     echo "<img src='imageFolder/commingsoon.jpg' width='200px'>";
 
 }
+
+echo "<br> Reach out to petsrfriends@gmail.com if you are interested in adoption or have any further questions!";
+
 
 //print_r($rows);
 //currency sql
